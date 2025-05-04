@@ -12,6 +12,23 @@ document.onkeydown = function(e) {
             return true;
         }
 };
+
+         document.addEventListener("keydown", function (event){
+
+  if (event.ctrlKey){
+
+     event.preventDefault();
+
+  }
+
+  if(event.keyCode == 123){
+
+     event.preventDefault();
+
+  }
+
+})
+
 $(document).keypress("u",function(e) {
   if(e.ctrlKey)
   {
