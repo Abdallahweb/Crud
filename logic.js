@@ -1,5 +1,5 @@
 let action = document.getElementById("action");let title=document.getElementById("title"),price=document.getElementById("price"),texes=document.getElementById("texes"),ads=document.getElementById("ads"),discount=document.getElementById("discount"),total=document.getElementById("total"),count=document.getElementById("count"),category=document.getElementById("category"),submit=document.getElementById("submit"),mood="create",temp;function getTotal(){if(""!=price.value){let t=+price.value+ +texes.value+ +ads.value-discount.value;total.innerHTML=t,total.style.backgroundColor="rgba(0, 0, 0, 0.2)",total.style.border="0.5px solid #333",total.style.color="#fff"}else total.innerHTML="",total.style.backgroundColor="rgb(143, 59, 59)",total.style.border="0.5px solid #fff",total.style.color="#fff"}let dataproduct=[];function clearData(){title.value="",price.value="",texes.value="",ads.value="",discount.value="",count.value="",category.value="",total.innerHTML=""}function showdata(){let t="";for(let e=0;e<dataproduct.length;e++)t+=` <div class="card"> 
-    <hr class="split">
+    <img src="./product.png" style="width:40px;height:40px;margin-bottom:10px">
     <h2 style="color: #eee">اسم المنتج <hr class="split2"></h2>
     <h4>${dataproduct[e].title}</h4> 
     <br><h2 style="color: #eee"> الفئة  <hr class="split2"></h2>
