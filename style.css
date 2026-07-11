@@ -136,7 +136,7 @@ button:hover {
 .card {
   width: 30%;
   height: 400px;
-background-image: linear-gradient(to right, #141416 , 5% ,  transparent , 95% , #141416);
+background-image: linear-gradient(to right bottom, #141416 , 15% ,  transparent , 95% , #141416);
  background-size: cover; 
 background-position:  center;
  background-repeat: no-repeat;  
