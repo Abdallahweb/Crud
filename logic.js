@@ -108,7 +108,7 @@ function createCard(product, index) {
 
                 <li class="fas fa-pen-nib"
                     style="
-                    font-size:20px;
+                    font-size:17px;
                     color:rgb(2, 97, 175)">
                 </li>
 
