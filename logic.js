@@ -78,30 +78,30 @@ function createCard(product, index) {
             <img src="./product.png"
                  style="width:40px;height:40px;margin-bottom:10px">
 
-            <h2 style="color:#eee">
+            <h3 style="color:#eee">
                 اسم المنتج
                 <hr class="split2">
-            </h2>
+            </h3>
 
-            <h4>${product.title}</h4>
+            <h3>${product.title}</h3>
 
             <br>
 
-            <h2 style="color:#eee">
+            <h3 style="color:#eee">
                 الفئة
                 <hr class="split2">
-            </h2>
+            </h3>
 
-            <h4>${product.category}</h4>
+            <h3>${product.category}</h3>
 
             <br>
 
-            <h2 style="color:#eee">
+            <h3 style="color:#eee">
                 السعر
                 <hr class="split2">
-            </h2>
+            </h3>
 
-            <h4>${product.total}</h4>
+            <h3>${product.total}</h3>
 
             <button class="edit"
                     onclick="updatedata(${index})">
