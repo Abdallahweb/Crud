@@ -11,7 +11,10 @@ body {
 font-family: "Cairo", Noto Kufi Arabic, sans-serif !important;
 font-size: 12px;
 }
+input{
+    font-family: "Cairo", Noto Kufi Arabic, sans-serif !important;
 
+}
 .dashboard {
   width: 25%;
   height: auto;
