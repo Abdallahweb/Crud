@@ -180,7 +180,11 @@ submit.onclick = function () {
         !discount.value.trim() ||
         !category.value.trim()
     ) {
-        alert("يرجى ملء جميع الحقول");
+        Swal.fire({
+icon: 'error',
+text: 'يجب ملء جميع الحقول­'
+});
+
         return;
     }
 
