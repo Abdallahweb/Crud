@@ -182,7 +182,9 @@ submit.onclick = function () {
     ) {
         Swal.fire({
 icon: 'error',
-text: 'يجب ملء جميع الحقول­'
+text: 'يجب ملء جميع الحقول­',
+confirmButtonText: 'حسناً',
+
 });
 
         return;
