@@ -244,19 +244,23 @@ text: 'يجب ملء جميع الحقول­'
 // ====================
 
 function deletedata(index) {
-
-    const check = confirm(
-        "Are You Sure ?"
-    );
-
-    if (!check) return;
-
-    dataproduct.splice(index, 1);
-
-    saveData();
-    showdata();
+    Swal.fire({
+        title: 'هل أنت متأكد؟',
+        text: 'لن تستطيع استرجاع البيانات بعد الحذف',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'نعم، احذف',
+        cancelButtonText: 'إلغاء'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            dataproduct.splice(index, 1);
+            saveData();
+            showdata();
+        }
+    });
 }
-
 // ====================
 // Update
 // ====================
