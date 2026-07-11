@@ -106,10 +106,10 @@ function createCard(product, index) {
             <button class="edit"
                     onclick="updatedata(${index})">
 
-                <li class="fas fa-edit"
+                <li class="fas fa-pen-nib"
                     style="
                     font-size:20px;
-                    color:rgb(26,90,193)">
+                    color:rgb(2, 97, 175)">
                 </li>
 
             </button>
