@@ -145,11 +145,7 @@ function showdata() {
                 <img src="./no-product.gif"
                      class="no-product">
 
-                <br><br>
-
-                <h1 style="color:#f53232">
-                    لا توجد منتجات مضافة حتى الآن
-                </h1>
+                
 
             </div>
         `;
