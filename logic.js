@@ -30,7 +30,7 @@ function getTotal() {
         total.innerHTML = p + tx + ad - dis;
 
         total.style.backgroundColor = "rgba(0,0,0,.2)";
-        total.style.border = "0.5px solid #333";
+        total.style.border = "0.5px solid #888";
         total.style.color = "#fff";
     } else {
         total.innerHTML = "";
@@ -78,7 +78,7 @@ function createCard(product, index) {
             <img src="./product.png"
                  style="width:40px;height:40px;margin-bottom:10px">
 
-            <h3 style="color:#eee">
+            <h3 style="color:#888">
                 اسم المنتج
                 <hr class="split2">
             </h3>
@@ -87,7 +87,7 @@ function createCard(product, index) {
 
             <br>
 
-            <h3 style="color:#eee">
+            <h3 style="color:#888">
                 الفئة
                 <hr class="split2">
             </h3>
@@ -96,7 +96,7 @@ function createCard(product, index) {
 
             <br>
 
-            <h3 style="color:#eee">
+            <h3 style="color:#888">
                 السعر
                 <hr class="split2">
             </h3>
