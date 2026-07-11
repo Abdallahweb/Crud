@@ -103,13 +103,13 @@ function createCard(product, index) {
 
             <h3>${product.total}</h3>
 
-            <button class="edit"
+            <button class="edit" title="Edit"
                     onclick="updatedata(${index})">
 
                 <li class="fas fa-pen-nib"
                     style="
                     font-size:17px;
-                    color:rgb(2, 97, 175)">
+                    color:rgb(0, 79, 153)">
                 </li>
 
             </button>
