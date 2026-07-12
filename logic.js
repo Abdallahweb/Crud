@@ -214,9 +214,11 @@ confirmButtonText: 'حسناً',
             }
 
         } else {
-        $(".search").show();
 
             dataproduct.push(newProduct);
+            window.location.reload();
+
+        $(".search").show();
 
         }
 
