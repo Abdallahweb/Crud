@@ -214,7 +214,6 @@ confirmButtonText: 'حسناً',
             }
 
         } else {
-
             dataproduct.push(newProduct);
             window.location.reload();
 
