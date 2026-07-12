@@ -139,6 +139,7 @@ function showdata() {
 
     if (dataproduct.length === 0) {
 
+        $(".search").hide();
         body.innerHTML = `
             <div style="text-align:center;margin:auto">
 
@@ -213,12 +214,14 @@ confirmButtonText: 'حسناً',
             }
 
         } else {
+        $(".search").show();
 
             dataproduct.push(newProduct);
 
         }
 
     } else {
+
 
         dataproduct[temp] = newProduct;
 
