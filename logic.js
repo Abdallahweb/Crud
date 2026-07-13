@@ -145,7 +145,7 @@ function showdata() {
 
                 <img src="./no-product.gif"
                      class="no-product">
-
+<h1 style="color:silver">No Product Found</h1>
                 
 
             </div>
@@ -214,6 +214,7 @@ confirmButtonText: 'حسناً',
             }
 
         } else {
+
             dataproduct.push(newProduct);
             window.location.reload();
 
