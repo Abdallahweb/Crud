@@ -145,7 +145,7 @@ function showdata() {
 
                 <img src="./no-product.gif"
                      class="no-product">
-<h1 style="color:silver">No Product Found</h1>
+<h1 style="color:silver">لا توجد منتجات حتى الاَن</h1>
                 
 
             </div>
