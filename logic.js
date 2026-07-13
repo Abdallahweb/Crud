@@ -21,24 +21,24 @@ let dataproduct = JSON.parse(localStorage.getItem("product")) || [];
 // ====================
 
 function getTotal() {
-    const p = Number(price.value) || 0;
-    const tx = Number(texes.value) || 0;
-    const ad = Number(ads.value) || 0;
-    const dis = Number(discount.value) || 0;
+const p = Number(price.value) || 0;
+const tx = Number(texes.value) || 0;
+const ad = Number(ads.value) || 0;
+const dis = Number(discount.value) || 0;
 
-    if (price.value !== "") {
-        total.innerHTML = p + tx + ad - dis;
+if (price.value !== "") {
+total.innerHTML = p + tx + ad - dis;
 
-        total.style.backgroundColor = "rgba(0,0,0,.2)";
-        total.style.border = "0.5px solid #888";
-        total.style.color = "#fff";
-    } else {
-        total.innerHTML = "";
+total.style.backgroundColor = "rgba(0,0,0,.2)";
+total.style.border = "0.5px solid #888";
+total.style.color = "#fff";
+} else {
+total.innerHTML = "";
 
-        total.style.backgroundColor = "rgb(143,59,59)";
-        total.style.border = "0.5px solid #fff";
-        total.style.color = "#fff";
-    }
+total.style.backgroundColor = "rgb(143,59,59)";
+total.style.border = "0.5px solid #fff";
+total.style.color = "#fff";
+}
 }
 
 // ====================
@@ -46,10 +46,10 @@ function getTotal() {
 // ====================
 
 function saveData() {
-    localStorage.setItem(
-        "product",
-        JSON.stringify(dataproduct)
-    );
+localStorage.setItem(
+"product",
+JSON.stringify(dataproduct)
+);
 }
 
 // ====================
@@ -57,14 +57,14 @@ function saveData() {
 // ====================
 
 function clearData() {
-    title.value = "";
-    price.value = "";
-    texes.value = "";
-    ads.value = "";
-    discount.value = "";
-    count.value = "";
-    category.value = "";
-    total.innerHTML = "";
+title.value = "";
+price.value = "";
+texes.value = "";
+ads.value = "";
+discount.value = "";
+count.value = "";
+category.value = "";
+total.innerHTML = "";
 }
 
 // ====================
@@ -72,61 +72,61 @@ function clearData() {
 // ====================
 
 function createCard(product, index) {
-    return `
-        <div class="card">
+return `
+<div class="card">
 
-            <img src="./product.png"
-                 style="width:40px;height:40px;margin-bottom:10px">
+<img src="./product.png"
+style="width:40px;height:40px;margin-bottom:10px">
 
-            <h3 style="color:#888">
-                اسم المنتج
-                <hr class="split2">
-            </h3>
+<h3 style="color:#888">
+اسم المنتج
+<hr class="split2">
+</h3>
 
-            <h3>${product.title}</h3>
+<h3>${product.title}</h3>
 
-            <br>
+<br>
 
-            <h3 style="color:#888">
-                الفئة
-                <hr class="split2">
-            </h3>
+<h3 style="color:#888">
+الفئة
+<hr class="split2">
+</h3>
 
-            <h3>${product.category}</h3>
+<h3>${product.category}</h3>
 
-            <br>
+<br>
 
-            <h3 style="color:#888">
-                السعر
-                <hr class="split2">
-            </h3>
+<h3 style="color:#888">
+السعر
+<hr class="split2">
+</h3>
 
-            <h3>${product.total}</h3>
+<h3>${product.total}</h3>
 
-            <button class="edit" title="Edit"
-                    onclick="updatedata(${index})">
+<button class="edit" title="Edit"
+onclick="updatedata(${index})">
 
-                <li class="fas fa-pen-nib"
-                    style="
-                    font-size:17px;
-                    color:rgb(0, 79, 153)">
-                </li>
+<li class="fas fa-pen-nib"
+style="
+font-size:17px;
+color:rgb(0, 79, 153)">
+</li>
 
-            </button>
+</button>
 
-            <button class="delete"
-                    onclick="deletedata(${index})">
+<button class="delete"
+onclick="deletedata(${index})">
 
-                <li class="fas fa-trash"
-                    style="
-                    font-size:20px;
-                    color:#ca261d">
-                </li>
+<li class="fas fa-trash"
+style="
+font-size:20px;
+color:#ca261d">
+</li>
 
-            </button>
+</button>
 
-        </div>
-    `;
+</div>
+`;
 }
 
 // ====================
@@ -135,32 +135,32 @@ function createCard(product, index) {
 
 function showdata() {
 
-    const body = document.getElementById("thebody");
+const body = document.getElementById("thebody");
 
-    if (dataproduct.length === 0) {
+if (dataproduct.length === 0) {
 
-        $(".search").hide();
-        body.innerHTML = `
-            <div style="text-align:center;margin:auto">
+$(".search").hide();
+body.innerHTML = `
+<div style="text-align:center;margin:auto">
 
-                <img src="./no-product.gif"
-                     class="no-product">
+<img src="./no-product.gif"
+class="no-product">
 <h1 style="color:silver">لا توجد منتجات حتى الاَن</h1>
-                
 
-            </div>
-        `;
 
-        return;
-    }
+</div>
+`;
 
-    let content = "";
+return;
+}
 
-    dataproduct.forEach((product, index) => {
-        content += createCard(product, index);
-    });
+let content = "";
 
-    body.innerHTML = content;
+dataproduct.forEach((product, index) => {
+content += createCard(product, index);
+});
+
+body.innerHTML = content;
 }
 
 // ====================
@@ -169,77 +169,79 @@ function showdata() {
 
 submit.onclick = function () {
 
-    if (
-        !title.value.trim() ||
-        !price.value.trim() ||
-        !texes.value.trim() ||
-        !ads.value.trim() ||
-        !discount.value.trim() ||
-        !category.value.trim()
-    ) {
-        Swal.fire({
+if (
+!title.value.trim() ||
+!price.value.trim() ||
+!texes.value.trim() ||
+!ads.value.trim() ||
+!discount.value.trim() ||
+!category.value.trim()
+) {
+Swal.fire({
 icon: 'error',
 text: 'يجب ملء جميع الحقول­',
 confirmButtonText: 'حسناً',
 
 });
 
-        return;
-    }
+return;
+}
 
-    const newProduct = {
-        title: title.value.toLowerCase(),
-        price: price.value,
-        texes: texes.value,
-        ads: ads.value,
-        discount: discount.value,
-        total: total.innerHTML,
-        count: count.value,
-        category: category.value.toLowerCase()
-    };
+const newProduct = {
+title: title.value.toLowerCase(),
+price: price.value,
+texes: texes.value,
+ads: ads.value,
+discount: discount.value,
+total: total.innerHTML,
+count: count.value,
+category: category.value.toLowerCase()
+};
 
-    if (mood === "create") {
+if (mood === "create") {
 
-        if (
-            newProduct.count > 1 &&
-            newProduct.count < 100
-        ) {
+if (
+newProduct.count > 1 &&
+newProduct.count < 100
+) {
 
-            for (
-                let i = 0;
-                i < newProduct.count;
-                i++
-            ) {
-                dataproduct.push(newProduct);
-            }
+for (
+let i = 0;
+i < newProduct.count;
+i++
+) {
+window.location.reload();
 
-        } else {
+dataproduct.push(newProduct);
+}
 
-            dataproduct.push(newProduct);
-            window.location.reload();
+} else {
+window.location.reload();
 
-        $(".search").show();
+dataproduct.push(newProduct);
 
-        }
+$(".search").show();
 
-    } else {
+}
+
+} else {
 
 
-        dataproduct[temp] = newProduct;
+dataproduct[temp] = newProduct;
 
-        mood = "create";
+mood = "create";
 
-        submit.innerHTML = "إضافة";
+submit.innerHTML = "إضافة";
 
-        action.innerHTML =
-            "- أضف منتج جديد -";
+action.innerHTML =
+"- أضف منتج جديد -";
 
-        count.style.display = "block";
-    }
+count.style.display = "block";
+}
 
-    saveData();
-    clearData();
-    showdata();
+saveData();
+clearData();
+showdata();
 };
 
 // ====================
@@ -247,22 +249,22 @@ confirmButtonText: 'حسناً',
 // ====================
 
 function deletedata(index) {
-    Swal.fire({
-        title: 'هل أنت متأكد؟',
-        text: 'لن تستطيع استرجاع البيانات بعد الحذف',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#d33',
-        cancelButtonColor: '#3085d6',
-        confirmButtonText: 'نعم، احذف',
-        cancelButtonText: 'إلغاء'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            dataproduct.splice(index, 1);
-            saveData();
-            showdata();
-        }
-    });
+Swal.fire({
+title: 'هل أنت متأكد؟',
+text: 'لن تستطيع استرجاع البيانات بعد الحذف',
+icon: 'warning',
+showCancelButton: true,
+confirmButtonColor: '#d33',
+cancelButtonColor: '#3085d6',
+confirmButtonText: 'نعم، احذف',
+cancelButtonText: 'إلغاء'
+}).then((result) => {
+if (result.isConfirmed) {
+dataproduct.splice(index, 1);
+saveData();
+showdata();
+}
+});
 }
 // ====================
 // Update
@@ -270,32 +272,32 @@ function deletedata(index) {
 
 function updatedata(index) {
 
-    const product = dataproduct[index];
+const product = dataproduct[index];
 
-    title.value = product.title;
-    price.value = product.price;
-    texes.value = product.texes;
-    ads.value = product.ads;
-    discount.value = product.discount;
-    category.value = product.category;
+title.value = product.title;
+price.value = product.price;
+texes.value = product.texes;
+ads.value = product.ads;
+discount.value = product.discount;
+category.value = product.category;
 
-    getTotal();
+getTotal();
 
-    count.style.display = "none";
+count.style.display = "none";
 
-    action.innerHTML =
-        "- تحديث بيانات المنتج -";
+action.innerHTML =
+"- تحديث بيانات المنتج -";
 
-    submit.innerHTML = "تحديث";
+submit.innerHTML = "تحديث";
 
-    mood = "update";
+mood = "update";
 
-    temp = index;
+temp = index;
 
-    scroll({
-        top: 0,
-        behavior: "smooth"
-    });
+scroll({
+top: 0,
+behavior: "smooth"
+});
 }
 
 // ====================
@@ -306,47 +308,47 @@ let searchMood = "title";
 
 function getsearch(id) {
 
-    const search = document.getElementById("search");
+const search = document.getElementById("search");
 
-    if (id === "searchtitle") {
+if (id === "searchtitle") {
 
-        searchMood = "title";
+searchMood = "title";
 
-        search.placeholder =
-            "Search By Title";
-    }
+search.placeholder =
+"Search By Title";
+}
 
-    search.focus();
-    search.value = "";
+search.focus();
+search.value = "";
 
-    showdata();
+showdata();
 }
 
 function searchdata(value) {
 
-    let content = "";
+let content = "";
 
-    if (searchMood === "title") {
+if (searchMood === "title") {
 
-        dataproduct.forEach((product, index) => {
+dataproduct.forEach((product, index) => {
 
-            if (
-                product.title
-                    .toLowerCase()
-                    .includes(value.toLowerCase())
-            ) {
+if (
+product.title
+.toLowerCase()
+.includes(value.toLowerCase())
+) {
 
-                content += createCard(
-                    product,
-                    index
-                );
-            }
-        });
-    }
+content += createCard(
+product,
+index
+);
+}
+});
+}
 
-    document.getElementById(
-        "thebody"
-    ).innerHTML = content;
+document.getElementById(
+"thebody"
+).innerHTML = content;
 }
 
 // ====================
@@ -357,34 +359,34 @@ showdata();
 
 
 
-    document.onkeydown = function(e) {
-      if (e.ctrlKey &&
-        (e.keyCode === 67 ||
-          e.keyCode === 86 ||
-          e.keyCode === 85 ||
-          e.keyCode === 117)) {
-        return false;
-      } else {
-        return true;
-      }
-    };
-    $(document).keypress("u", function(e) {
-      if (e.ctrlKey) {
-        return false;
-      } else {
-        return true;
-      }
-    });
+document.onkeydown = function(e) {
+if (e.ctrlKey &&
+(e.keyCode === 67 ||
+e.keyCode === 86 ||
+e.keyCode === 85 ||
+e.keyCode === 117)) {
+return false;
+} else {
+return true;
+}
+};
+$(document).keypress("u", function(e) {
+if (e.ctrlKey) {
+return false;
+} else {
+return true;
+}
+});
 
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-    }, false);
+document.addEventListener("contextmenu", function(e) {
+e.preventDefault();
+}, false);
 
 
-    $(document).keydown(function(event) {
-      if (event.keyCode == 123) { // Prevent F12
-        return false;
-      } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-        return false;
-      }
-    });
+$(document).keydown(function(event) {
+if (event.keyCode == 123) { // Prevent F12
+return false;
+} else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+return false;
+}
+});
